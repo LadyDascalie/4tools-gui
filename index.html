@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>4tools</title>
+	<link rel="stylesheet" href="css/master.css" media="screen">
+	<link rel="stylesheet" href="photon/dist/css/photon.min.css" media="screen">
+	<link rel="stylesheet" href="vendor/foundation-6.2.4-essential/css/foundation.min.css" media="screen" title="no title">
+	<script src="js/user.js"></script>
+</head>
+<body class="window">
+	<div class="window-content">
+
+		<!-- User interaction pane -->
+		<div class="pane">
+			<div class="padded-more" id="leftPane">
+
+				<!-- Large button group -->
+				<div class="btn-group">
+				  <button class="button" onclick="showMe()">
+				    <span class="icon icon-folder"></span>&nbsp;Open downloads
+				  </button>
+				</div>
+
+
+				<br><br><br><br>
+
+				<div class="form-group">
+					<label><b>Thread URL:</b><br>
+						<input id="userInput" class="form-control" type="text">
+					</label>
+					<br>
+
+					<label><b>Subfolder Name: </b><span class="pull-right subheader">(optional)</span><br>
+						<input type="text" id="subFolderName" class="form-control">
+					</label>
+					<br>
+
+					<button id="dlButton" class="success button" type="button" onclick='getUserInfo(document.getElementById("userInput").value, document.getElementById("subFolderName").value)'>
+							<span class="icon icon-download"></span>&nbsp;Download
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Output pane -->
+		<div class="pane">
+			<div class="padded-more">
+				<p class="subheader text-center">Console</p>
+				<div id="result"></div>
+				<br>
+				<button class="button" onclick="clearConsole()"><span class="icon icon-ccw"></span>&nbsp;Clear console</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+<footer class="toolbar toolbar-footer">
+	<!-- <h1 class="title"></h1> -->
+</footer>
+</html>
