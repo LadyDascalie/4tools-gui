@@ -1,16 +1,16 @@
-const {shell} = require('electron')
+const {shell} = require('electron');
 
 const remote = require('electron').remote;
 const app = remote.app;
 
-const spawn = require('child_process').spawn
-const path = require('path')
+const spawn = require('child_process').spawn;
+const path = require('path');
 
 var fs = require('fs');
 let fourTools;
 
 function getUserInfo(url, subfolder) {
-	btn = document.getElementById("dlButton")
+	var btn = document.getElementById("dlButton");
 
 	if (url === "") {
 		return false;
@@ -22,13 +22,13 @@ function getUserInfo(url, subfolder) {
 		fourTools = spawn('bin/4tools', ['-u', url, '-f', subfolder])
 	}
 
-	addSpinner()
-	btn.disabled = true
-	btn.innerText = "Downloading..."
+	addSpinner();
+	btn.disabled = true;
+	btn.innerText = "Downloading...";
 
 
 	fourTools.stdout.on('data', (data) => {
-		d = document.getElementById('result')
+		var d = document.getElementById('result');
 		d.innerText += data;
 	});
 
@@ -37,10 +37,10 @@ function getUserInfo(url, subfolder) {
 	});
 
 	fourTools.on('close', (code) => {
-		console.log(`child process exited with code ${code}`)
-		removeSpinner()
-		btn.disabled = false
-		btn.innerText = 'Download'
+		console.log(`child process exited with code ${code}`);
+		removeSpinner();
+		btn.disabled = false;
+		btn.innerText = 'Download';
 	});
 }
 
@@ -49,23 +49,18 @@ function showMe() {
 }
 
 function addSpinner() {
-	p = document.getElementById("leftPane")
+	var p = document.getElementById("leftPane");
 
-	s = document.createElement('div')
-	s.classList += "loader"
-	s.id = "spinner"
+	var s = document.createElement('div');
+	s.classList += "loader";
+	s.id = "spinner";
 
 	p.appendChild(s)
 }
 
 function removeSpinner() {
-	p = document.getElementById("leftPane")
-	s = document.getElementById("spinner")
+	p = document.getElementById("leftPane");
+	s = document.getElementById("spinner");
 
 	p.removeChild(s)
-}
-
-function clearConsole() {
-	d = document.getElementById("result")
-	d.innerText = ""
 }
