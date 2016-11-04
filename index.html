@@ -9,7 +9,7 @@
           title="no title">
     <script src="js/user.js"></script>
 </head>
-<body class="window">
+<body class="window padded-more" id="main">
 <div class="window-content">
 
     <!-- User interaction pane -->
@@ -19,10 +19,12 @@
             <!-- Large button group -->
             <div class="btn-group">
                 <button class="button" onclick="showMe()">
-                    <span class="icon icon-folder"></span>&nbsp;Open downloads
+                    <span class="icon icon-folder"></span>&nbsp;Open 4tools downloads
+                </button>
+                <button class="button" onclick="generateRandomKey()">
+                    <span class="icon icon-folder"></span>&nbsp;Random Key
                 </button>
             </div>
-
 
             <br><br><br><br>
 
@@ -41,8 +43,12 @@
                         onclick='getUserInfo(document.getElementById("userInput").value, document.getElementById("subFolderName").value)'>
                     <span class="icon icon-download"></span>&nbsp;Download
                 </button>
-            </div>
 
+                <!--<button id="subButton" class="success button" type="button"-->
+                        <!--onclick='pickFile()'>-->
+                    <!--<span class="icon icon-download"></span>&nbsp;Pick Subfolder-->
+                <!--</button>-->
+            </div>
 
         </div>
     </div>
@@ -61,7 +67,7 @@
 
 </body>
 
-<footer class="toolbar toolbar-footer">
-    <!--<h1 class="title"><a id="footerLink">Fork me on Github&nbsp;<span class="icon icon-github"></span></a></h1>-->
-</footer>
+<!--<footer class="toolbar toolbar-footer">-->
+    <!--&lt;!&ndash;<h1 class="title"><a id="footerLink">Fork me on Github&nbsp;<span class="icon icon-github"></span></a></h1>&ndash;&gt;-->
+<!--</footer>-->
 </html>

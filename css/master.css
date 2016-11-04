@@ -9,12 +9,23 @@ body {
 	padding-right: 15px;*/
 }
 
+body.window {
+    background-color: #0a0a0a;
+}
+
+#main {
+    background-image: url("../img/quivertrees_breuer_3000.jpg");
+}
+
 #result {
+    font-family: monospace;
 	height: 600px;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(70, 70, 70, 0.85);
 	color: white;
 	padding: 10px;
+    font-size:1.1em;
+    overflow: scroll;
 
 	/* These are technically the same, but use both */
 	overflow-wrap: break-word;
@@ -27,15 +38,19 @@ body {
 	word-break: break-word;
 }
 
-label {
+label{
 	width: 100%;
+}
+
+label b {
+    color: white;
 }
 
 .loader,
 .loader:after {
   border-radius: 50%;
-  width: 10em;
-  height: 10em;
+  width: 5em;
+  height: 5em;
 }
 .loader {
   margin: 60px auto;
