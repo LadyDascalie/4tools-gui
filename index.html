@@ -9,7 +9,7 @@
           title="no title">
     <script src="js/user.js"></script>
 </head>
-<body class="window padded-more" id="main">
+<body class="window padded-more" id="main" style="-webkit-app-region: drag">
 <div class="window-content">
 
     <!-- User interaction pane -->
@@ -18,17 +18,17 @@
 
             <!-- Large button group -->
             <div class="btn-group">
-                <button class="button" onclick="showMe()">
+                <button class="button" onclick="openDownloadFolder()">
                     <span class="icon icon-folder"></span>&nbsp;Open 4tools downloads
                 </button>
-                <button class="button" onclick="generateRandomKey()">
-                    <span class="icon icon-folder"></span>&nbsp;Random Key
-                </button>
+                <!--<button class="button" onclick="generateRandomKey()">-->
+                    <!--<span class="icon icon-folder"></span>&nbsp;Random Key-->
+                <!--</button>-->
             </div>
 
             <br><br><br><br>
 
-            <div class="form-group">
+            <div class="form-group" id="form">
                 <label><b>Thread URL:</b><br>
                     <input id="userInput" class="form-control" type="text">
                 </label>
@@ -39,7 +39,7 @@
                 </label>
                 <br>
 
-                <button id="dlButton" class="success button" type="button"
+                <button id="dlButton" class="button" type="button"
                         onclick='getUserInfo(document.getElementById("userInput").value, document.getElementById("subFolderName").value)'>
                     <span class="icon icon-download"></span>&nbsp;Download
                 </button>
@@ -49,20 +49,20 @@
                     <!--<span class="icon icon-download"></span>&nbsp;Pick Subfolder-->
                 <!--</button>-->
             </div>
-
+            <div id="spinnerWrapper"></div>
         </div>
     </div>
 
     <!-- Output pane -->
-    <div class="pane">
-        <div class="padded-more">
-            <p class="subheader text-center">Console</p>
-            <div id="result"></div>
-            <br>
-            <button class="button" onclick="clearConsole()"><span class="icon icon-ccw"></span>&nbsp;Clear console
-            </button>
-        </div>
-    </div>
+    <!--<div class="pane">-->
+        <!--<div class="padded-more">-->
+            <!--<p class="subheader text-center">Console</p>-->
+            <!--<div id="result"></div>-->
+            <!--<br>-->
+            <!--<button class="button" onclick="clearConsole()"><span class="icon icon-ccw"></span>&nbsp;Clear console-->
+            <!--</button>-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 
 </body>
