@@ -103,3 +103,17 @@ label b {
     padding-top: 50%;
     background-color: rgba(0, 0, 0, 0.75);
 }
+
+.gallery.img {
+    max-width: 160px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.capsule {
+    display: inline-table;
+    overflow: hidden;
+    max-width:200px;
+    max-height:200px;
+    padding:15px;
+}

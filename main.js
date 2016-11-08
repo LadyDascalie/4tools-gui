@@ -9,8 +9,8 @@ let win;
 function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
-        width: 450,
-        height: 450,
+        width: 1280,
+        height: 850,
         titleBarStyle: 'hidden',
         icon: 'logo.png'
     });
